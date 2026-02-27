@@ -57,6 +57,7 @@ public class RedBus_Automation {
         By tuppleWrapperLocator = By.xpath("//li[contains(@class,'tupleWrapper')]");
         By BusesNameLocator = By.xpath(".//div[contains(@class,'travelsName')]");
 
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tuppleWrapperLocator));
         //scroll
         JavascriptExecutor js = (JavascriptExecutor)driver;
 
