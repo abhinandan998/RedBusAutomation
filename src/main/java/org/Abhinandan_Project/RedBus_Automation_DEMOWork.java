@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class RedBus_Automation {
+public class RedBus_Automation_DEMOWork {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -56,14 +56,21 @@ public class RedBus_Automation {
 
         By tuppleWrapperLocator = By.xpath("//li[contains(@class,'tupleWrapper')]");
         By BusesNameLocator = By.xpath(".//div[contains(@class,'travelsName')]");
-
+//
+         // List<WebElement> rowList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tuppleWrapperLocator));
+        //System.out.println("Total no of buses :" + rowList.size());
+//        for (WebElement row : rowList) {
+//            System.out.println(row.findElement(BusesNameLocator).getText());
+//        }
         //scroll
         JavascriptExecutor js = (JavascriptExecutor)driver;
 
 
+//
+//        List<WebElement> newRowList = wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(tuppleWrapperLocator, rowList.size()));
+//        System.out.println("Total Number of buses: " + newRowList.size());
 
-
-        while (true)//lazy loading
+        while (true)//lazy loading 
         {
             List<WebElement> rowList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tuppleWrapperLocator));
             List<WebElement> endOfList = driver.findElements(By.xpath("//span[contains(text(),'End of list')]"));
